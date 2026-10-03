@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "revision": 0,
+  "updatedAt": "2026-10-03T12:00:00.000Z",
+  "business": {
+    "id": "spin",
+    "name": "SPIN",
+    "owner": "Demo Founder",
+    "goal": "Acquire suitable B2B prospects, qualify interest, and hand interested buyers to the founder.",
+    "description": "New energy-drink client. All buyers and conversations in this workspace are fictional; product claims and commercial details are unknown."
+  },
+  "provider": {
+    "mode": "offline",
+    "label": "Guided offline assistant",
+    "available": false
+  },
+  "context": {
+    "facts": [
+      {
+        "id": "fact-business",
+        "label": "Business",
+        "value": "SPIN / founder Demo Founder / new energy-drink B2B client",
+        "status": "user-provided",
+        "sourceId": "source-brief"
+      },
+      {
+        "id": "fact-goal",
+        "label": "First service",
+        "value": "Qualify evidence-backed interest; prepare local follow-ups; hand interested buyers to Demo Founder internally.",
+        "status": "user-provided",
+        "sourceId": "source-brief"
+      }
+    ],
+    "unknowns": [
+      "Approved product ingredients",
+      "Clinical concentration benefit substantiation",
+      "Approved unit price and trial cost",
+      "Available trial formats, quantities and delivery dates"
+    ],
+    "handoff": {
+      "minFit": 70,
+      "requireInterest": true
+    }
+  },
+  "sources": [
+    {
+      "id": "source-brief",
+      "title": "SPIN / Demo Founder shared brief · fictional SPIN demo",
+      "kind": "brief",
+      "status": "synthetic",
+      "observedAt": "2026-10-03T12:00:00.000Z",
+      "text": "SYNTHETIC DEMO: all buyer organisations, people, conversations and quantities below are fictional. EUR is the demo currency. Requested quantities are examples, not approved SPIN stock or offers.\n\nSPIN is a new energy-drink client. Founder: Demo Founder. Goal: identify suitable B2B retailers, restaurants and gyms, qualify expressed buyer interest, prepare grounded local follow-up drafts, and hand interested buyers to Demo Founder internally. Approved ingredients, clinical concentration benefits, prices in EUR, trial formats, availability and delivery dates are UNKNOWN. Do not infer benefits or quote a price. Demo fit scores are seller hypotheses, not purchase probabilities. Qualification requires demo fit >= 70 and expressed interest; contact permission is a separate field. A fictional buyer requesting one reply permits only that requested reply in this scenario; it does not authorize a real send. Scenario clock: 3 October 2026, 14:00 Europe/Brussels. No real outreach, external CRM update or spend is authorized.",
+      "demoFile": "sources/source-brief.txt",
+      "evidenceLink": "#source-brief"
+    },
+    {
+      "id": "source-warm",
+      "title": "Demo Pulse Gym / Nora Venn / meeting + call · fictional SPIN demo",
+      "kind": "sample",
+      "status": "synthetic",
+      "observedAt": "2026-10-01T10:00:00.000Z",
+      "text": "SYNTHETIC DEMO: all buyer organisations, people, conversations and quantities below are fictional. EUR is the demo currency. Requested quantities are examples, not approved SPIN stock or offers.\n\n30 September 2026, sample sales meeting. Nora Venn, gym manager: \"We have a reception fridge and our staff would like to assess a drink before deciding whether to stock it. Could you explain your wholesale process?\" Demo Founder: \"I need to confirm the approved trial and wholesale details first.\"\n1 October, 12:00 Brussels, latest sample call. Nora: \"We are interested in a staff trial. Can you email me the trial options and wholesale information? A sample request of 24 cans would help our review, if that format exists. Please pass this to Demo Founder for a conversation.\" Seller: \"I will confirm the options and return to you by 2 October.\"\nNo later response or fulfilled commitment is recorded. At the explicit demo clock the promised update is overdue. Latest interest: expressed. Permission: the requested follow-up only. Quantity: 24 cans requested as a fictional example; no stock, pack size, unit price, cost or delivery promise is approved. Next safe action: source-linked acknowledgement draft, then internal handoff to Demo Founder.",
+      "demoFile": "sources/source-warm.txt",
+      "evidenceLink": "#source-warm"
+    },
+    {
+      "id": "source-clinical",
+      "title": "Demo Bramble Bistro Group / Mika Rowan / chain call · fictional SPIN demo",
+      "kind": "sample",
+      "status": "synthetic",
+      "observedAt": "2026-10-02T08:00:00.000Z",
+      "text": "SYNTHETIC DEMO: all buyer organisations, people, conversations and quantities below are fictional. EUR is the demo currency. Requested quantities are examples, not approved SPIN stock or offers.\n\n1 October, fictional restaurant-chain meeting covering three fictional sites. Mika Rowan, buying manager: \"The sites sell takeaway drinks. We could assess a product, but we need to understand what claims we can put on a menu.\"\n2 October, latest sample call. Mika: \"We are interested only if SPIN is clinically proven to improve concentration and treat ADHD. Can we advertise that claim?\"\nNo approved clinical evidence, ingredients or concentration benefit substantiation was supplied. Interest is conditional on an unsupported clinical requirement. Permission is unknown; this question is not blanket outreach permission. Next safe action: explain the evidence gap locally; do not prepare a clinical pitch or hand off as a qualified match.",
+      "demoFile": "sources/source-clinical.txt",
+      "evidenceLink": "#source-clinical"
+    },
+    {
+      "id": "source-optout",
+      "title": "Demo Ember Corner Shop / Luca Fern / email opt-out · fictional SPIN demo",
+      "kind": "sample",
+      "status": "synthetic",
+      "observedAt": "2026-10-02T12:00:00.000Z",
+      "text": "SYNTHETIC DEMO: all buyer organisations, people, conversations and quantities below are fictional. EUR is the demo currency. Requested quantities are examples, not approved SPIN stock or offers.\n\n29 September, sample shop-counter meeting. Luca Fern, owner: \"The drinks fridge is a possible fit; you can send one introduction.\" This older interest is obsolete.\n2 October, latest sample email from luca@ember-shop.example: \"Please do not contact me again. Remove us from outreach and do not send any more follow-ups.\"\nLatest interest: withdrawn. Permission: do_not_contact. High hypothetical fit does not override this opt-out. Next safe action: suppress outreach; no draft or founder handoff.",
+      "demoFile": "sources/source-optout.txt",
+      "evidenceLink": "#source-optout"
+    },
+    {
+      "id": "source-price",
+      "title": "Demo Mosaic Mini Markets / Inez Vale / wholesale email · fictional SPIN demo",
+      "kind": "sample",
+      "status": "synthetic",
+      "observedAt": "2026-10-02T14:00:00.000Z",
+      "text": "SYNTHETIC DEMO: all buyer organisations, people, conversations and quantities below are fictional. EUR is the demo currency. Requested quantities are examples, not approved SPIN stock or offers.\n\n1 October, sample sales meeting. Inez Vale, buyer for a fictional three-shop chain: \"We compare new drinks for our checkout fridges. We need wholesale terms before deciding.\"\n2 October, latest sample email from inez@mosaic-markets.example: \"We are interested in reviewing a trial. What is the unit price in EUR, and what would 96 cans across our three shops cost? Please reply with the information when it is approved.\"\nQuantity 96 and site count three are synthetic buyer requests only. Unit price, total cost, margin, pack sizes, offer terms, stock and delivery are UNKNOWN. No purchase or revenue is recorded. Permission covers this requested information reply only. Next safe action: acknowledge interest locally and ask Demo Founder for approved commercial facts before quoting.",
+      "demoFile": "sources/source-price.txt",
+      "evidenceLink": "#source-price"
+    },
+    {
+      "id": "source-timing",
+      "title": "Demo Lantern Kitchen / Theo Reed / changed opening · fictional SPIN demo",
+      "kind": "sample",
+      "status": "synthetic",
+      "observedAt": "2026-10-03T09:00:00.000Z",
+      "text": "SYNTHETIC DEMO: all buyer organisations, people, conversations and quantities below are fictional. EUR is the demo currency. Requested quantities are examples, not approved SPIN stock or offers.\n\n30 September, sample restaurant meeting. Theo Reed, owner: \"We are interested in assessing SPIN for our lunch counter. Could we discuss a 24-can trial in October?\"\n3 October, 11:00 Brussels, latest sample email from theo@lantern-kitchen.example: \"Our opening has moved to November. Please wait until November before following up. We now expect to need 60 cans instead of 24.\"\nLatest timing: November. Latest requested example quantity: 60 cans; October and 24 cans are superseded. No exact November date has been agreed. Permission: reply only in the requested period. Interest remains expressed. Next safe action: record the changed timing and quantity; prepare only a local draft for later review, never schedule or contact now.",
+      "demoFile": "sources/source-timing.txt",
+      "evidenceLink": "#source-timing"
+    },
+    {
+      "id": "source-complete",
+      "title": "Demo Cedar Strength Studio / Ari Moss / completed handoff · fictional SPIN demo",
+      "kind": "sample",
+      "status": "synthetic",
+      "observedAt": "2026-10-03T10:00:00.000Z",
+      "text": "SYNTHETIC DEMO: all buyer organisations, people, conversations and quantities below are fictional. EUR is the demo currency. Requested quantities are examples, not approved SPIN stock or offers.\n\n2 October, sample gym sales meeting. Ari Moss, studio manager: \"We are interested in a staff trial and would like a conversation with Demo Founder. Please record the request.\"\n3 October, local fictional CRM record: safe follow-up draft prepared at 12:10 Brussels; internal Demo Founder handoff recorded at 12:15. Local stage: handoff, complete. Trial terms, approved EUR pricing and availability remain UNKNOWN. No email was sent, no sale occurred, and no external CRM was changed.\nNext safe action: show the existing draft and completed internal handoff; repeating the same action must create no duplicate draft or activity.",
+      "demoFile": "sources/source-complete.txt",
+      "evidenceLink": "#source-complete"
+    },
+    {
+      "id": "source-unconfirmed",
+      "title": "Demo Juniper Food Shop / Esme Pine / seller hypothesis · fictional SPIN demo",
+      "kind": "sample",
+      "status": "synthetic",
+      "observedAt": "2026-10-02T15:00:00.000Z",
+      "text": "SYNTHETIC DEMO: all buyer organisations, people, conversations and quantities below are fictional. EUR is the demo currency. Requested quantities are examples, not approved SPIN stock or offers.\n\n2 October, sample research note after a brief shop-floor introduction. Seller: \"This fictional independent shop has a drinks fridge and might fit SPIN. I think they may be interested.\" Esme Pine, store manager: \"I have not reviewed the product and have not asked for a follow-up.\"\nFit 88 is a synthetic seller hypothesis. Buyer interest: unconfirmed. Contact permission: unknown. The address esme@juniper-shop.example is a fictional record, not consent. Next safe action: establish buyer interest and permission; do not treat a high fit score or seller guess as an interested sales opportunity.",
+      "demoFile": "sources/source-unconfirmed.txt",
+      "evidenceLink": "#source-unconfirmed"
+    },
+    {
+      "id": "source-declined",
+      "title": "Demo Pebble Lunch Bar / Remy Ash / declined trial · fictional SPIN demo",
+      "kind": "sample",
+      "status": "synthetic",
+      "observedAt": "2026-10-03T08:00:00.000Z",
+      "text": "SYNTHETIC DEMO: all buyer organisations, people, conversations and quantities below are fictional. EUR is the demo currency. Requested quantities are examples, not approved SPIN stock or offers.\n\n1 October, sample restaurant meeting. Remy Ash, manager: \"You may reply to this conversation while we assess options.\"\n3 October, latest sample email from remy@pebble-lunch.example: \"We are not interested in a trial. We decided not to add another drink this season.\"\nLatest interest: withdrawn. Existing permission for the conversation remains allowed; the buyer did not request a contact opt-out. Withdrawal of sales interest is distinct from do_not_contact. Next safe action: record the decision and stop sales qualification/drafts/handoff.",
+      "demoFile": "sources/source-declined.txt",
+      "evidenceLink": "#source-declined"
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead-warm",
+      "company": "Demo Pulse Gym",
+      "contact": "Nora Venn",
+      "role": "Gym manager",
+      "segment": "Gym",
+      "fit": 94,
+      "interest": "expressed",
+      "stage": "new",
+      "permission": "allowed",
+      "email": "nora@pulse-gym.example",
+      "evidenceIds": [
+        "source-warm"
+      ],
+      "nextAction": "",
+      "notes": [],
+      "synthetic": true
+    },
+    {
+      "id": "lead-clinical",
+      "company": "Demo Bramble Bistro Group",
+      "contact": "Mika Rowan",
+      "role": "Chain buying manager",
+      "segment": "Restaurant chain",
+      "fit": 38,
+      "interest": "expressed",
+      "stage": "new",
+      "permission": "unknown",
+      "email": "mika@bramble-bistro.example",
+      "evidenceIds": [
+        "source-clinical"
+      ],
+      "nextAction": "",
+      "notes": [],
+      "synthetic": true
+    },
+    {
+      "id": "lead-optout",
+      "company": "Demo Ember Corner Shop",
+      "contact": "Luca Fern",
+      "role": "Shop owner",
+      "segment": "Retail shop",
+      "fit": 90,
+      "interest": "withdrawn",
+      "stage": "suppressed",
+      "permission": "do_not_contact",
+      "email": "luca@ember-shop.example",
+      "evidenceIds": [
+        "source-optout"
+      ],
+      "nextAction": "",
+      "notes": [],
+      "synthetic": true
+    },
+    {
+      "id": "lead-price",
+      "company": "Demo Mosaic Mini Markets",
+      "contact": "Inez Vale",
+      "role": "Chain buyer",
+      "segment": "Small retail chain",
+      "fit": 89,
+      "interest": "expressed",
+      "stage": "new",
+      "permission": "allowed",
+      "email": "inez@mosaic-markets.example",
+      "evidenceIds": [
+        "source-price"
+      ],
+      "nextAction": "",
+      "notes": [],
+      "synthetic": true
+    },
+    {
+      "id": "lead-timing",
+      "company": "Demo Lantern Kitchen",
+      "contact": "Theo Reed",
+      "role": "Restaurant owner",
+      "segment": "Restaurant",
+      "fit": 82,
+      "interest": "expressed",
+      "stage": "new",
+      "permission": "allowed",
+      "email": "theo@lantern-kitchen.example",
+      "evidenceIds": [
+        "source-timing"
+      ],
+      "nextAction": "",
+      "notes": [],
+      "synthetic": true
+    },
+    {
+      "id": "lead-complete",
+      "company": "Demo Cedar Strength Studio",
+      "contact": "Ari Moss",
+      "role": "Studio manager",
+      "segment": "Gym",
+      "fit": 91,
+      "interest": "expressed",
+      "stage": "handoff",
+      "permission": "allowed",
+      "email": "ari@cedar-studio.example",
+      "evidenceIds": [
+        "source-complete"
+      ],
+      "nextAction": "",
+      "notes": [],
+      "synthetic": true
+    },
+    {
+      "id": "lead-unconfirmed",
+      "company": "Demo Juniper Food Shop",
+      "contact": "Esme Pine",
+      "role": "Store manager",
+      "segment": "Retail shop",
+      "fit": 88,
+      "interest": "unconfirmed",
+      "stage": "new",
+      "permission": "unknown",
+      "email": "esme@juniper-shop.example",
+      "evidenceIds": [
+        "source-unconfirmed"
+      ],
+      "nextAction": "",
+      "notes": [],
+      "synthetic": true
+    },
+    {
+      "id": "lead-declined",
+      "company": "Demo Pebble Lunch Bar",
+      "contact": "Remy Ash",
+      "role": "Restaurant manager",
+      "segment": "Restaurant",
+      "fit": 83,
+      "interest": "withdrawn",
+      "stage": "new",
+      "permission": "allowed",
+      "email": "remy@pebble-lunch.example",
+      "evidenceIds": [
+        "source-declined"
+      ],
+      "nextAction": "",
+      "notes": [],
+      "synthetic": true
+    }
+  ],
+  "drafts": [
+    {
+      "id": "draft-complete",
+      "leadId": "lead-complete",
+      "subject": "Your SPIN trial conversation",
+      "body": "Hi Ari,\n\nThanks for your interest in discussing a SPIN staff trial. Your request is recorded for Demo Founder to review internally. Trial formats, approved pricing and availability still need confirmation.\n\nPrepared locally for review. No outreach has been sent.",
+      "createdAt": "2026-10-03T10:10:00.000Z",
+      "evidenceIds": [
+        "source-brief",
+        "source-complete"
+      ],
+      "status": "draft"
+    }
+  ],
+  "activity": [
+    {
+      "id": "activity-complete-draft",
+      "leadId": "lead-complete",
+      "type": "draft_created",
+      "text": "Synthetic demo: local follow-up prepared; no email sent.",
+      "createdAt": "2026-10-03T10:10:00.000Z",
+      "sourceId": "source-complete"
+    },
+    {
+      "id": "activity-complete-handoff",
+      "leadId": "lead-complete",
+      "type": "handoff",
+      "text": "Synthetic demo: internal handoff to Demo Founder completed; no external CRM changed.",
+      "createdAt": "2026-10-03T10:15:00.000Z",
+      "sourceId": "source-complete"
+    }
+  ],
+  "messages": [
+    {
+      "id": "message-welcome",
+      "role": "assistant",
+      "text": "SPIN / Demo Founder fictional B2B demo. Eight fictional retail, restaurant and gym buyers. Inspect sources, qualify interest, prepare local drafts and record internal handoffs. Product claims, prices and stock remain unknown.",
+      "evidenceIds": [
+        "source-brief"
+      ],
+      "createdAt": "2026-10-03T12:00:00.000Z"
+    }
+  ],
+  "channels": [],
+  "proposals": [],
+  "demoPack": {
+    "id": "spin-fictional-b2b-v1",
+    "synthetic": true,
+    "isolated": true
+  }
+}

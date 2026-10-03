@@ -1,0 +1,5 @@
+{
+  "note": "Original local Sales Jarvis source snapshots adapted for a static browser demo. Privacy edits remove personal account email and replace founder name with Demo Founder. Real provider/runtime/private imports excluded.",
+  "source": "apps/sales-jarvis",
+  "demo": "Eight fictional buyers and .example email contacts"
+}

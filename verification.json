@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T17:21:27.138Z",
+  "buyers": 8,
+  "founder": "Demo Founder",
+  "mainStage": "handoff",
+  "browserFetchAdapter": "qualify/draft/handoff saves browser-local state before returning success",
+  "unknownPricePreserved": true,
+  "optOutBlocked": true,
+  "importsBlocked": true,
+  "credentialSetupBlocked": true,
+  "liveVoice": false,
+  "providerCalls": 0,
+  "storageFailureDoesNotClaimSave": true,
+  "uiReadback": "NOT VERIFIED: automatic tool review blocked isolated headless browser launch; owner opens task Browser",
+  "source": "Derived same-core engine plus browser localStorage adapter"
+}

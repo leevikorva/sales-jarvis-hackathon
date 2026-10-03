@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { prepareState, applyLocalAction } from './dist/browser-core.mjs';
+let state=prepareState(JSON.parse(await readFile(new URL('./dist/seed.json',import.meta.url),'utf8')));
+assert.equal(state.leads.length,8);assert.equal(state.business.owner,'Demo Founder');assert.equal(state.channels.reduce((n,c)=>n+c.assessed,0),8);
+for(const type of ['qualify','draft','handoff'])state=applyLocalAction(state,{type,leadId:'lead-warm'}).state;
+assert.equal(state.leads.find(l=>l.id==='lead-warm').stage,'handoff');
+const draft=state.drafts.find(d=>d.leadId==='lead-warm');assert.match(draft.body,/approved pricing/);assert.ok(draft.evidenceIds.includes('source-warm'));
+assert.throws(()=>applyLocalAction(state,{type:'draft',leadId:'lead-optout'}),/opted out/);
+assert.throws(()=>applyLocalAction(state,{type:'draft',leadId:'lead-clinical'}),/unsupported clinical/);
+assert.throws(()=>applyLocalAction(state,{type:'import',files:[]}),/no file imports/);
+state=applyLocalAction(state,{type:'draft',leadId:'lead-timing'}).state;assert.match(state.drafts.find(d=>d.leadId==='lead-timing').body,/November and 60 cans/);
+const previous=JSON.stringify(state);assert.equal(JSON.stringify(applyLocalAction(state,{type:'handoff',leadId:'lead-complete'}).state),previous);
+console.log('PASS: eight buyers, all-eight metrics, same-core qualification/draft/handoff, unknown price, opt-out, unsupported claims, timing, duplicate guard, imports disabled.');

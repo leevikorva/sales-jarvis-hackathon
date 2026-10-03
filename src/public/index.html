@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2449DC" />
+    <meta name="description" content="Sales Jarvis — a local, evidence-led sales workspace for SPIN. Synthetic demonstration data." />
+    <title>Sales Jarvis · SPIN workspace</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/manager-ui.css" />
+    <style>body{margin:0}body.manager-presentation>.skip-link,body.manager-presentation>#toast,body.manager-presentation>#source-dialog{display:none}</style>
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to workspace</a>
+    <div id="app" aria-busy="true">
+      <div class="startup"><div class="startup-mark" aria-hidden="true"></div><h1>Sales Jarvis</h1><p>Opening your local workspace…</p></div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <dialog id="source-dialog" class="source-dialog" aria-labelledby="source-title"></dialog>
+  </body>
+</html>
